@@ -1,6 +1,5 @@
 import SnakeHead
-import SnakeNode
-class SnakeBody:
+class Snake():
 	def __init__(self):
 		bodyList=[]
 		bodyList.add(SnakeHead.newHead())
@@ -9,4 +8,4 @@ class SnakeBody:
 		return bodyList[-1]
 	
 	def grow():
-		bodyList.append(SnakeNode.newNode())
+		bodyList.append(SnakeBody.newBody())
