@@ -1,3 +1,3 @@
 # dogshit-snake
 Snake game.
-	--master branch
+	--mzy branch

@@ -15,20 +15,24 @@ class Snake():
 		return self.bodyList[0]
 
 	def grow(self):
-		self.bodyList.append(SnakeBody(getTail()))
+		self.bodyList.append(SnakeBody(self.getTail()))
 
-	def eat(self):
-		grow()
+	def eat(self,food):
+		self.grow()
+		food.freshMeat()
 
 	def turn(self,direction):
-		self.turnPostition[getHead.position] = direction
+		self.turnPostition[self.getHead().position] = direction
 
 	def run(self):
 		bodyPosition = []
-		for node in bodyList:
+		for node in self.bodyList:
 			if node.position in self.turnPostition.keys():
 				node.turn(self.turnPostition[node.position])
-				run()
+				if node is self.getTail():
+					self.turnPostition.pop(node.position)
+			node.run()
 			bodyPosition.append(node.position)
+		if bodyPosition.count(self.getHead().position) > 1:
+			return False
 		return bodyPosition
-
