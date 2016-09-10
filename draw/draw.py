@@ -9,7 +9,7 @@ from snake.Snake import *
 from world.food import *
 import random
 
-def start():
+def start(path):
     window_width = 800
     window_height = 600
 
@@ -17,12 +17,12 @@ def start():
 
     worldSize = (window_width/blockSize-1,window_height/blockSize-1)
 
-    node_image = 'images/node.png'
-    pause_image = 'images/pause.png'
-    over_image = 'images/over.jpg'
-    meat_image = 'images/meat.png'
-    meat_image2 = 'images/meat2.png'
-    meat_image3 = 'images/meat3.jpg'
+    node_image = path +'images/node.png'
+    pause_image = path +'images/pause.png'
+    over_image = path +'images/over.jpg'
+    meat_image = path +'images/meat.png'
+    meat_image2 = path +'images/meat2.png'
+    meat_image3 = path +'images/meat3.jpg'
     
     pygame.init()
     screen = pygame.display.set_mode((window_width, window_height), 0, 32)
